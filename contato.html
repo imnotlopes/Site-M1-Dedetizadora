@@ -9,7 +9,10 @@
   <meta property="og:title" content="Contato — M1 Service Dedetizadora Brasília, DF">
   <meta property="og:description" content="Fale com a M1 Service pelo WhatsApp, e-mail ou formulario. Orçamento gratuito em todo o DF.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -39,6 +42,7 @@
 
     /* HERO */
     .hero-int{padding:110px 5% 60px;background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('assets/images/hero-contato.png') center/cover no-repeat;position:relative;overflow:hidden}
+    html.webp .hero-int{background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('assets/images/hero-contato.webp') center/cover no-repeat}
     .hero-int::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,#fff,#fff 1px,transparent 0,transparent 50%);background-size:30px 30px;opacity:.04;pointer-events:none}
     .hero-int-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
     .breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:13px;margin-bottom:16px}
@@ -149,6 +153,7 @@
       .footer-grid{grid-template-columns:1fr;gap:32px}
     }
   </style>
+<script>(function(){var i=new Image();i.onload=function(){if(i.width>0&&i.height>0)document.documentElement.classList.add('webp')};i.src='data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA'})();</script>
 </head>
 <body>
 
@@ -212,13 +217,13 @@
           </div>
           <div class="form-group">
             <label for="f-msg">Descricao do problema</label>
-            <textarea id="f-msg" name="mensagem" placeholder="Descreva brevemente o que esta acontecendo e o tipo de imóvel (casa, apartamento, comércio...)"></textarea>
+            <textarea id="f-msg" name="mensagem" placeholder="Descreva brevemente o que está acontecendo e o tipo de imóvel (casa, apartamento, comércio...)"></textarea>
           </div>
           <button type="submit" class="btn-submit">
             <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
             Enviar pelo WhatsApp
           </button>
-          <p class="form-note">Suas informacoes serao enviadas diretamente ao WhatsApp da M1 Service. Não armazenamos dados.</p>
+          <p class="form-note">Suas informações serão enviadas diretamente ao WhatsApp da M1 Service. Não armazenamos dados.</p>
         </form>
       </div>
 

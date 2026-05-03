@@ -9,7 +9,10 @@
   <meta property="og:title" content="Pragas Urbanas — M1 Service Dedetizadora Brasília, DF">
   <meta property="og:description" content="Conheca as principais pragas do DF e como a M1 Service elimina cada uma. Orçamento gratuito.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -37,6 +40,7 @@
 
     /* HERO INTERNO */
     .hero-int{padding:110px 5% 60px;background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('assets/images/hero-pragas.png') center/cover no-repeat;position:relative;overflow:hidden}
+    html.webp .hero-int{background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('assets/images/hero-pragas.webp') center/cover no-repeat}
     .hero-int::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,#fff,#fff 1px,transparent 0,transparent 50%);background-size:30px 30px;opacity:.04;pointer-events:none}
     .hero-int-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
     .breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:13px;margin-bottom:16px}
@@ -128,6 +132,7 @@
       .footer-grid{grid-template-columns:1fr;gap:32px}
     }
   </style>
+<script>(function(){var i=new Image();i.onload=function(){if(i.width>0&&i.height>0)document.documentElement.classList.add('webp')};i.src='data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA'})();</script>
 </head>
 <body>
 
@@ -165,7 +170,10 @@
       <!-- BARATAS -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/barata.png" alt="Baratas - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/barata.webp" type="image/webp">
+            <img src="assets/images/barata.png" alt="Baratas - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -187,7 +195,10 @@
       <!-- ARANHAS -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/aranha.png" alt="Aranhas - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/aranha.webp" type="image/webp">
+            <img src="assets/images/aranha.png" alt="Aranhas - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -209,7 +220,10 @@
       <!-- ESCORPIOES -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/escorpião.png" alt="Escorpioes - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/escorpião.webp" type="image/webp">
+            <img src="assets/images/escorpião.png" alt="Escorpioes - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -217,7 +231,7 @@
           </div>
           <h2>Escorpioes</h2>
         </div>
-        <p class="praga-desc">O Tityus serrulatus e a especie mais comum e perigosa no DF, cada vez mais presente em áreas urbanas. Sua picada pode ser fatal para crianças e idosos. Habitam entulhos, frestas em paredes e áreas umidas.</p>
+        <p class="praga-desc">O Tityus serrulatus e a especie mais comum e perigosa no DF, cada vez mais presente em áreas urbanas. Sua picada pode ser fatal para crianças e idosos. Habitam entulhos, frestas em paredes e áreas úmidas.</p>
         <p class="praga-sub">Sinais de infestação</p>
         <ul class="sinais-list">
           <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Avistamentos noturnos em banheiros e cozinhas</li>
@@ -231,7 +245,10 @@
       <!-- RATOS -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/rato.png" alt="Ratos e roedores - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/rato.webp" type="image/webp">
+            <img src="assets/images/rato.png" alt="Ratos e roedores - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -239,21 +256,24 @@
           </div>
           <h2>Ratos e Roedores</h2>
         </div>
-        <p class="praga-desc">Transmissores de leptospirose e hantavirose, os ratos contaminam alimentos e roem fiacoes elétricas, causando prejuizos materiais e riscos de incendio. Proliferam rápidamente em áreas com lixo e entulho.</p>
+        <p class="praga-desc">Transmissores de leptospirose e hantavirose, os ratos contaminam alimentos e roem fiações elétricas, causando prejuizos materiais e riscos de incendio. Proliferam rápidamente em áreas com lixo e entulho.</p>
         <p class="praga-sub">Sinais de infestação</p>
         <ul class="sinais-list">
           <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Fezes pequenas e escuras em cantos e detras de moveis</li>
-          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Marcas de roedura em embalagens e fiacoes</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Marcas de roedura em embalagens e fiações</li>
           <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Ruidos noturnos em paredes e forros</li>
         </ul>
-        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Instalação de iscos estrategicos e barreiras fisicas, com diagnóstico dos pontos de entrada para uma desratização efetiva e duradoura.</div>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Instalação de iscos estratégicos e barreiras físicas, com diagnóstico dos pontos de entrada para uma desratização efetiva e duradoura.</div>
         <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20desratiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
       </div>
 
       <!-- CUPINS -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/cupim.png" alt="Cupins - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/cupim.webp" type="image/webp">
+            <img src="assets/images/cupim.png" alt="Cupins - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -275,7 +295,10 @@
       <!-- POMBOS -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/pombo.png" alt="Pombos - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/pombo.webp" type="image/webp">
+            <img src="assets/images/pombo.png" alt="Pombos - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -297,7 +320,10 @@
       <!-- MOSQUITOS -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/mosquito.png" alt="Mosquitos - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/mosquito.webp" type="image/webp">
+            <img src="assets/images/mosquito.png" alt="Mosquitos - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -319,7 +345,10 @@
       <!-- FORMIGAS -->
       <div class="praga-card fade-up">
         <div class="praga-img">
-          <img src="assets/images/formiga.png" alt="Formigas - controle M1 Service" loading="lazy">
+          <picture>
+            <source srcset="assets/images/formiga.webp" type="image/webp">
+            <img src="assets/images/formiga.png" alt="Formigas - controle M1 Service" loading="lazy">
+          </picture>
         </div>
         <div class="praga-header">
           <div class="praga-icon">
@@ -365,7 +394,7 @@
       </div>
       <div class="sabia-card fade-up">
         <span class="sabia-num">40%</span>
-        <p>Dos incendios residênciais causados por problemas eletricos no Brasil tem como fator contribuinte o roimento de fiacoes por ratos e roedores.</p>
+        <p>Dos incendios residênciais causados por problemas eletricos no Brasil tem como fator contribuinte o roimento de fiações por ratos e roedores.</p>
       </div>
     </div>
   </div>
@@ -374,7 +403,7 @@
 <!-- CTA FINAL -->
 <div class="cta-final">
   <div class="sec-inner">
-    <h2>Proteja sua propriedade com quem tem 10 anos de experiencia</h2>
+    <h2>Proteja sua propriedade com quem tem 10 anos de experiência</h2>
     <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-white" target="_blank" rel="noopener noreferrer">Solicitar Orçamento Gratuito</a>
   </div>
 </div>
