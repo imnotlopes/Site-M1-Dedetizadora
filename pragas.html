@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragas Urbanas — M1 Service Dedetizadora Brasília, DF</title>
+  <meta name="description" content="Conheca as principais pragas urbanas do DF: baratas, ratos, escorpioes, cupins e mais. M1 Service resolve cada caso em Brasília e todo o Distrito Federal.">
+  <meta name="keywords" content="pragas urbanas brasilia, escorpiao df, barata brasilia, desratização df, cupim brasilia, controle de pragas">
+  <meta property="og:title" content="Pragas Urbanas — M1 Service Dedetizadora Brasília, DF">
+  <meta property="og:description" content="Conheca as principais pragas do DF e como a M1 Service elimina cada uma. Orçamento gratuito.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#2E7D32;--green-dark:#1B5E20;--green-light:#4CAF50;--green-xlight:#E8F5E9;--white:#FFFFFF;--gray:#555555;--gray-light:#F5F5F5;--text-dark:#1A1A1A;--text-mid:#444444}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6}
+    a{color:inherit}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
+    nav.scrolled{box-shadow:0 2px 16px rgba(0,0,0,.12)}
+    .nav-inner{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo{text-decoration:none;display:flex;align-items:center}
+    .logo img{height:48px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--text-mid);transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--green)}
+    .nav-cta{background:var(--green)!important;color:#fff!important;padding:10px 20px;border-radius:8px;font-weight:600!important;transition:background .25s,transform .25s!important}
+    .nav-cta:hover{background:var(--green-dark)!important;transform:translateY(-2px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:transform .3s,opacity .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+    /* HERO INTERNO */
+    .hero-int{padding:110px 5% 60px;background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('assets/images/hero-pragas.png') center/cover no-repeat;position:relative;overflow:hidden}
+    .hero-int::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,#fff,#fff 1px,transparent 0,transparent 50%);background-size:30px 30px;opacity:.04;pointer-events:none}
+    .hero-int-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+    .breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:13px;margin-bottom:16px}
+    .breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none}
+    .breadcrumb a:hover{color:#fff}
+    .breadcrumb span{color:rgba(255,255,255,.4)}
+    .hero-int h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,3rem);color:#fff;margin-bottom:12px}
+    .hero-int p{font-size:clamp(.95rem,2vw,1.1rem);color:rgba(255,255,255,.85);max-width:600px}
+
+    /* SECTIONS */
+    section{padding:80px 5%}
+    .sec-inner{max-width:1200px;margin:0 auto}
+    .sec-title{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--text-dark);text-align:center;margin-bottom:48px}
+    .sec-title span{color:var(--green)}
+    .bg-gray{background:var(--gray-light)}
+    .bg-white{background:#fff}
+
+    /* PRAGAS GRID */
+    .pragas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+    .praga-card{background:#fff;border-radius:20px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s}
+    .praga-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.12)}
+    .praga-header{display:flex;align-items:center;gap:20px;margin-bottom:20px}
+    .praga-icon{width:80px;height:80px;background:var(--green-xlight);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .praga-header h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--text-dark)}
+    .praga-desc{font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:20px}
+    .praga-sub{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--text-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+    .sinais-list{list-style:none;margin-bottom:20px}
+    .sinais-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-mid);margin-bottom:7px}
+    .como-resolve{background:var(--green-xlight);border-radius:10px;padding:16px;margin-bottom:20px;font-size:14px;color:var(--green-dark);line-height:1.65}
+    .como-resolve strong{display:block;margin-bottom:4px;font-weight:700}
+    .btn-g{display:inline-block;background:var(--green);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;transition:background .25s,transform .25s}
+    .btn-g:hover{background:var(--green-dark);transform:translateY(-2px)}
+    .praga-img{height:220px;border-radius:16px 16px 0 0;overflow:hidden;margin:-36px -36px 24px}
+    .praga-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+
+    /* URGENCIA */
+    .urgencia{background:var(--green-dark);padding:60px 5%;text-align:center}
+    .urgencia h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:24px}
+    .btn-white{display:inline-block;background:#fff;color:var(--green-dark);padding:14px 32px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+
+    /* SABIA QUE */
+    .sabia-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+    .sabia-card{text-align:center;padding:32px 20px}
+    .sabia-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:3rem;color:var(--green);display:block;line-height:1;margin-bottom:12px}
+    .sabia-card p{font-size:15px;color:var(--gray);line-height:1.7}
+
+    /* CTA FINAL */
+    .cta-final{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 100%);padding:80px 5%;text-align:center}
+    .cta-final h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:28px}
+
+    /* FOOTER */
+    footer{background:#111;padding:60px 5% 24px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:48px}
+    .f-logo-block{background:var(--green-dark);color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;padding:3px 8px;display:inline-block;margin-bottom:4px}
+    .f-logo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;display:block}
+    .f-logo-sub{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.45)}
+    .f-desc{margin-top:14px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.55)}
+    .f-social{display:flex;gap:10px;margin-top:18px}
+    .social-btn{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s;text-decoration:none}
+    .social-btn:hover{background:var(--green)}
+    .f-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+    .f-col ul{list-style:none}
+    .f-col ul li{margin-bottom:10px}
+    .f-col ul li a{color:rgba(255,255,255,.55);text-decoration:none;font-size:14px;transition:color .2s}
+    .f-col ul li a:hover{color:var(--green-light)}
+    .f-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:14px;color:rgba(255,255,255,.55)}
+    .footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:13px;color:rgba(255,255,255,.35)}
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;flex-direction:column;align-items:flex-end}
+    .wa-float a{width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;transition:transform .2s}
+    .wa-float a:hover{transform:scale(1.05)}
+    .wa-float a::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid #25D366;animation:pulse 2s infinite}
+    @keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.4);opacity:0}}
+    .wa-tooltip{background:var(--green-dark);color:#fff;font-size:13px;font-weight:600;padding:7px 14px;border-radius:8px;margin-bottom:10px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity .25s,transform .25s;pointer-events:none}
+    .wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0)}
+    .fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 5%;box-shadow:0 8px 24px rgba(0,0,0,.1);gap:0;z-index:199}
+      .nav-links.open{display:flex}
+      .nav-links li{border-bottom:1px solid rgba(0,0,0,.06)}
+      .nav-links a{display:block;padding:14px 0}
+      .nav-links li:last-child{border-bottom:none}
+      .nav-cta{margin-top:8px;text-align:center;border-radius:8px;display:block}
+      .pragas-grid{grid-template-columns:1fr}
+      .sabia-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;gap:32px}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Logotipo M1 Service Dedetizadora" width="140" loading="eager">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegacao"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="serviços.html">Serviços</a></li>
+      <li><a href="pragas.html" class="active">Pragas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="nav-cta" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero-int">
+  <div class="hero-int-inner">
+    <nav class="breadcrumb" aria-label="Caminho de navegacao">
+      <a href="index.html">Inicio</a><span>/</span><span>Pragas</span>
+    </nav>
+    <h1>Pragas que Combatemos</h1>
+    <p>Conheca as principais pragas urbanas e como a M1 Service resolve cada caso em Brasília e em todo o DF.</p>
+  </div>
+</div>
+
+<section class="bg-white">
+  <div class="sec-inner">
+    <div class="pragas-grid">
+
+      <!-- BARATAS -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/barata.png" alt="Baratas - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="26" rx="9" ry="13" fill="#1B5E20"/><circle cx="24" cy="12" r="5" fill="#1B5E20"/><line x1="22" y1="8" x2="14" y2="2" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="26" y1="8" x2="34" y2="2" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="20" x2="6" y2="18" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="26" x2="5" y2="26" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="32" x2="6" y2="36" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="20" x2="42" y2="18" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="26" x2="43" y2="26" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="32" x2="42" y2="36" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h2>Baratas</h2>
+        </div>
+        <p class="praga-desc">Transmissoras de salmonela e outras doencas, as baratas habitam rachaduras, esgotos e cozinhas. Contaminam alimentos e utensílios ao simples contato, sendo um dos principais vetores de doencas em ambientes domesticos no DF.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Fezes escuras parecidas com graos de cafe</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Odor forte e caracteristico de mucus</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Avistamento noturno em cozinhas e banheiros</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Aplicação de gel e produto em spray nos pontos de entrada e esconderijos, eliminando baratas adultas e ovos com garantia de 30 dias.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+      <!-- ARANHAS -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/aranha.png" alt="Aranhas - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="32" r="9" fill="#212121"/><circle cx="24" cy="18" r="6" fill="#212121"/><path d="M18 16 Q10 12 6 8" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M18 18 Q10 18 4 16" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M18 20 Q10 24 6 28" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M18 22 Q12 28 8 36" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 16 Q38 12 42 8" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 18 Q38 18 44 16" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 20 Q38 24 42 28" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M30 22 Q36 28 40 36" stroke="#212121" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h2>Aranhas</h2>
+        </div>
+        <p class="praga-desc">Especies perigosas no DF incluem a aranha-marrom e a viuva-negra. Suas picadas podem causar reacoes graves, especialmente em crianças e idosos. Vivem em cantos escuros, atras de moveis e em entulhos.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Teias em cantos e áreas de pouco movimento</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Avistamento noturno nas paredes</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Bolotas de ovos presas a superficies</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Aplicação de inseticida residual em todo o perimetro interno e externo, com atenção especial a cantos, rodapes e áreas escuras.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+      <!-- ESCORPIOES -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/escorpi%C3%A3o.png" alt="Escorpioes - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="20" cy="30" rx="11" ry="7" fill="#5D4037"/><path d="M10 26 Q6 22 4 24 Q6 26 8 28" stroke="#5D4037" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M10 30 Q6 32 4 30 Q6 28 8 28" stroke="#5D4037" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M30 28 Q36 24 40 18 Q44 12 42 8" stroke="#5D4037" stroke-width="3" fill="none" stroke-linecap="round"/><polygon points="42,8 38,6 44,4" fill="#5D4037"/></svg>
+          </div>
+          <h2>Escorpioes</h2>
+        </div>
+        <p class="praga-desc">O Tityus serrulatus e a especie mais comum e perigosa no DF, cada vez mais presente em áreas urbanas. Sua picada pode ser fatal para crianças e idosos. Habitam entulhos, frestas em paredes e áreas umidas.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Avistamentos noturnos em banheiros e cozinhas</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Entulho e material orgânico acumulado no quintal</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Presenca de baratas (alimento dos escorpioes)</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Dedetização ampla do ambiente com produtos de acao prolongada e orientação sobre medidas preventivas para evitar reinfestação.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+      <!-- RATOS -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/rato.png" alt="Ratos e roedores - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="26" cy="28" rx="13" ry="10" fill="#607D8B"/><circle cx="13" cy="24" r="7" fill="#607D8B"/><circle cx="9" cy="17" r="4" fill="#607D8B"/><circle cx="17" cy="16" r="3" fill="#607D8B"/><path d="M38 28 Q44 24 44 36" stroke="#607D8B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h2>Ratos e Roedores</h2>
+        </div>
+        <p class="praga-desc">Transmissores de leptospirose e hantavirose, os ratos contaminam alimentos e roem fiacoes elétricas, causando prejuizos materiais e riscos de incendio. Proliferam rápidamente em áreas com lixo e entulho.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Fezes pequenas e escuras em cantos e detras de moveis</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Marcas de roedura em embalagens e fiacoes</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Ruidos noturnos em paredes e forros</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Instalação de iscos estrategicos e barreiras fisicas, com diagnóstico dos pontos de entrada para uma desratização efetiva e duradoura.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20desratiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+      <!-- CUPINS -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/cupim.png" alt="Cupins - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="37" rx="9" ry="8" fill="#795548"/><ellipse cx="24" cy="24" rx="7" ry="6" fill="#795548"/><ellipse cx="24" cy="13" rx="5" ry="5" fill="#795548"/><polygon points="19,10 16,7 21,11" fill="#795548"/><polygon points="29,10 32,7 27,11" fill="#795548"/><line x1="22" y1="9" x2="18" y2="4" stroke="#795548" stroke-width="1.5" stroke-linecap="round"/><line x1="26" y1="9" x2="30" y2="4" stroke="#795548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h2>Cupins</h2>
+        </div>
+        <p class="praga-desc">De madeira e de solo, os cupins causam danos estruturais silenciosos em moveis, forros e estruturas de madeira. Uma colônia pode destruir uma estrutura em poucos anos sem que o problema seja percebido externamente.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Po de serra acumulado proximo a moveis ou forros</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Madeira com som oco ao bater</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Tuneis de barro nas paredes ou solo</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Diagnóstico completo do nivel de infestação, aplicação de produto de barreira e acompanhamento pos-tratamento para garantir a eliminação total.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20descupiniza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+      <!-- POMBOS -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/pombo.png" alt="Pombos - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="26" rx="13" ry="9" fill="#9E9E9E"/><circle cx="12" cy="20" r="7" fill="#9E9E9E"/><polygon points="6,21 2,22 6,23" fill="#795548"/><path d="M16 22 Q24 16 35 20" stroke="#757575" stroke-width="2" fill="none"/><polygon points="37,26 44,22 44,30" fill="#9E9E9E"/></svg>
+          </div>
+          <h2>Pombos</h2>
+        </div>
+        <p class="praga-desc">Pombos carregam fungos, parasitas e bactérias como a criptococcose e a psitacose. Suas fezes corroem fachadas, sujam áreas comuns e representam risco sanitario para moradores e transeuntes.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Acumulo de fezes em marquises e janelas</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Ninhos em beirais, calhas e telhados</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Plumas e parasitas proximo a áreas de pouso</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Instalação de telas, pinos e sistemas repelentes de forma humanizada, impedindo o pouso e nidificacao sem causar dano as aves.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20controle%20de%20pombos." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+      <!-- MOSQUITOS -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/mosquito.png" alt="Mosquitos - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="26" rx="5" ry="12" fill="#424242"/><circle cx="24" cy="13" r="4" fill="#424242"/><line x1="24" y1="10" x2="20" y2="5" stroke="#424242" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="10" x2="28" y2="5" stroke="#424242" stroke-width="1.5" stroke-linecap="round"/><path d="M14 22 Q8 18 4 20" stroke="#424242" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M14 26 Q8 26 4 28" stroke="#424242" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M34 22 Q40 18 44 20" stroke="#424242" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M34 26 Q40 26 44 28" stroke="#424242" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M18 20 Q16 14 20 12" stroke="#616161" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M30 20 Q32 14 28 12" stroke="#616161" stroke-width="1" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h2>Mosquitos</h2>
+        </div>
+        <p class="praga-desc">O Aedes aegypti e o principal vetor de dengue, zika e chikungunya no DF. Se reproduz em água parada em recipientes pequenos. Nos períodos de chuva a proliferação e especialmente rápida em áreas urbanas.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Água parada em vasos, calhas ou pneus</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Picadas frequentes durante o dia</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Zumbido constante em ambientes internos</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Nebulização de produto larvicida e adulticida com orientação sobre eliminação de criadouros para prevenção duradoura.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+      <!-- FORMIGAS -->
+      <div class="praga-card fade-up">
+        <div class="praga-img">
+          <img src="assets/images/formiga.png" alt="Formigas - controle M1 Service" loading="lazy">
+        </div>
+        <div class="praga-header">
+          <div class="praga-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="36" rx="7" ry="7" fill="#B71C1C"/><ellipse cx="24" cy="24" rx="5" ry="5" fill="#B71C1C"/><circle cx="24" cy="14" r="5" fill="#B71C1C"/><line x1="20" y1="12" x2="14" y2="7" stroke="#B71C1C" stroke-width="1.5" stroke-linecap="round"/><line x1="28" y1="12" x2="34" y2="7" stroke="#B71C1C" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="22" x2="8" y2="18" stroke="#B71C1C" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="26" x2="7" y2="26" stroke="#B71C1C" stroke-width="1.5" stroke-linecap="round"/><line x1="30" y1="22" x2="40" y2="18" stroke="#B71C1C" stroke-width="1.5" stroke-linecap="round"/><line x1="30" y1="26" x2="41" y2="26" stroke="#B71C1C" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h2>Formigas</h2>
+        </div>
+        <p class="praga-desc">A formiga lava-pes e uma especie venenosa presente no DF, cujas picadas causam ardencia intensa e podem desencadear reacoes alergicas. Outras especies infestam alimentos e estruturas, causando prejuizos domesticos e comerciais.</p>
+        <p class="praga-sub">Sinais de infestação</p>
+        <ul class="sinais-list">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Trilhas de formigas em paredes e rodapes</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Alimentos contaminados na cozinha</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Monticulos de terra proximo a paredes</li>
+        </ul>
+        <div class="como-resolve"><strong>Como a M1 Service resolve:</strong>Aplicação de gel e produto de isca específico para formigas, que e levado até o ninho pelas operarias e elimina a colônia de dentro para fora.</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Solicitar Eliminação</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- URGENCIA -->
+<div class="urgencia">
+  <div class="sec-inner">
+    <h2>Identificou alguma dessas pragas em sua propriedade?</h2>
+    <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-white" target="_blank" rel="noopener noreferrer">Chamar a M1 Service Agora</a>
+  </div>
+</div>
+
+<!-- SABIA QUE -->
+<section class="bg-gray">
+  <div class="sec-inner">
+    <h2 class="sec-title fade-up">Você <span>sabia?</span></h2>
+    <div class="sabia-grid">
+      <div class="sabia-card fade-up">
+        <span class="sabia-num">83%</span>
+        <p>Das residências brasileiras relatam algum tipo de infestação por pragas urbanas ao longo do ano, segundo pesquisas do setor de saneamento.</p>
+      </div>
+      <div class="sabia-card fade-up">
+        <span class="sabia-num">6x</span>
+        <p>Uma femea de barata pode gerar até 6 geracoes por ano, com centenas de ovos cada. Uma única barata pode dar origem a mais de 300 descendentes.</p>
+      </div>
+      <div class="sabia-card fade-up">
+        <span class="sabia-num">40%</span>
+        <p>Dos incendios residênciais causados por problemas eletricos no Brasil tem como fator contribuinte o roimento de fiacoes por ratos e roedores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="sec-inner">
+    <h2>Proteja sua propriedade com quem tem 10 anos de experiencia</h2>
+    <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-white" target="_blank" rel="noopener noreferrer">Solicitar Orçamento Gratuito</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="assets/images/logo.png" alt="Logotipo M1 Service Dedetizadora" width="140" loading="lazy" style="margin-bottom:14px;display:block">
+      <p class="f-desc">Empresa especializada em controle de pragas urbanas em Brasília e em todo o Distrito Federal. Há 10 anos protegendo famílias e negocios.</p>
+      <div class="f-social">
+        <a href="https://wa.me/5561993263868" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg></a>
+        <a href="https://instagram.com/M1_service_Dedetização" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="none" stroke="white" stroke-width="2"/><circle cx="16" cy="16" r="7" fill="none" stroke="white" stroke-width="2"/><circle cx="23" cy="9" r="1.5" fill="white"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navegacao</h4>
+      <ul><li><a href="index.html">Inicio</a></li><li><a href="serviços.html">Serviços</a></li><li><a href="pragas.html">Pragas</a></li><li><a href="blog.html">Blog</a></li><li><a href="contato.html">Contato</a></li></ul>
+    </div>
+    <div class="f-col">
+      <h4>Serviços</h4>
+      <ul><li><a href="serviços.html">Dedetização</a></li><li><a href="serviços.html">Desratização</a></li><li><a href="serviços.html">Descupinização</a></li><li><a href="serviços.html">Controle de Pombos</a></li><li><a href="serviços.html">Limpeza de Caixa de Água</a></li></ul>
+    </div>
+    <div class="f-col">
+      <h4>Contato</h4>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M12 2C7 2 3.5 6 3.5 11c0 6.5 8.5 12 8.5 12s8.5-5.5 8.5-12C20.5 6 17 2 12 2z" fill="#4CAF50"/><circle cx="12" cy="11" r="3" fill="white"/></svg>Quadra C12, Edifício São Paulo, Taguatinga, DF</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#4CAF50"/></svg>(61) 9 9326-3868</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#4CAF50"/></svg>M1serviceDedetizadora@gmail.com</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" fill="none"/><line x1="12" y1="12" x2="8" y2="8" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="12" x2="12" y2="7" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/></svg>Segunda a Sabado, 8h as 18h</div>
+    </div>
+  </div>
+  <div class="footer-bottom">2025 M1 Service Dedetizadora. Todos os direitos reservados.</div>
+</footer>
+
+<div class="wa-float">
+  <div class="wa-tooltip">Solicitar orçamento grátis</div>
+  <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
+    <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
+  </a>
+</div>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const hbg = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hbg.addEventListener('click', () => { hbg.classList.toggle('open'); navLinks.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

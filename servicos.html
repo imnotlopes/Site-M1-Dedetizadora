@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dedetizadora em Brasília, DF. M1 Service. Orçamento Grátis</title>
+  <meta name="description" content="Dedetização, desratização e descupinização em Brasília e todo o DF. 10 anos de experiencia. Orçamento gratuito pelo WhatsApp: (61) 9 9326-3868.">
+  <meta name="keywords" content="dedetizadora brasilia, dedetização df, desratização taguatinga, descupinização brasilia, controle de pragas df">
+  <meta property="og:title" content="Serviços — M1 Service Dedetizadora Brasília, DF">
+  <meta property="og:description" content="Dedetização, desratização, descupinização e mais em Brasília e todo o DF. Orçamento gratuito.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#2E7D32;--green-dark:#1B5E20;--green-light:#4CAF50;--green-xlight:#E8F5E9;--white:#FFFFFF;--gray:#555555;--gray-light:#F5F5F5;--text-dark:#1A1A1A;--text-mid:#444444}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6}
+    a{color:inherit}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
+    nav.scrolled{box-shadow:0 2px 16px rgba(0,0,0,.12)}
+    .nav-inner{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo{text-decoration:none;display:flex;align-items:center}
+    .logo img{height:48px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--text-mid);transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--green)}
+    .nav-cta{background:var(--green)!important;color:#fff!important;padding:10px 20px;border-radius:8px;font-weight:600!important;transition:background .25s,transform .25s!important}
+    .nav-cta:hover{background:var(--green-dark)!important;transform:translateY(-2px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:transform .3s,opacity .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+    /* HERO */
+    .hero{padding:120px 5% 70px;background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('assets/images/hero-serviços.png') center/cover no-repeat;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,#fff,#fff 1px,transparent 0,transparent 50%);background-size:30px 30px;opacity:.04;pointer-events:none}
+    .hero::after{content:'';position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);pointer-events:none}
+    .hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;text-align:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:8px 16px;border-radius:100px;font-size:14px;font-weight:500;margin-bottom:24px}
+    .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,3rem);color:#fff;line-height:1.2;margin-bottom:16px}
+    .hero-sub{font-size:clamp(.95rem,2vw,1.15rem);color:rgba(255,255,255,.88);max-width:640px;margin:0 auto 32px}
+    .btn-prim{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--green-dark);padding:16px 36px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+    .btn-prim:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .trust-bar{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:28px}
+    .trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.9);font-size:14px;font-weight:500}
+
+    /* STICKY BAR */
+    .sticky-bar{position:fixed;top:72px;left:0;right:0;background:var(--green);z-index:150;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;transform:translateY(-100%);transition:transform .35s;pointer-events:none}
+    .sticky-bar.show{transform:translateY(0);pointer-events:all}
+    .sticky-bar .sb-phone{color:#fff;font-weight:700;font-size:15px}
+    .sticky-bar .sb-right{display:flex;align-items:center;gap:12px}
+    .sb-cta{background:#fff;color:var(--green-dark);padding:8px 18px;border-radius:8px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;text-decoration:none;white-space:nowrap}
+    .sb-close{background:none;border:none;color:rgba(255,255,255,.8);font-size:22px;cursor:pointer;padding:0 4px;line-height:1}
+
+    /* SECTIONS */
+    section{padding:80px 5%}
+    .sec-inner{max-width:1200px;margin:0 auto}
+    .sec-title{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--text-dark);text-align:center;margin-bottom:48px}
+    .sec-title span{color:var(--green)}
+    .bg-gray{background:var(--gray-light)}
+    .bg-white{background:#fff}
+
+    /* SERVICOS DETALHADOS */
+    .servico-bloco{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid rgba(0,0,0,.07)}
+    .servico-bloco:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .servico-bloco.reverse{direction:rtl}
+    .servico-bloco.reverse > *{direction:ltr}
+    .servico-icon-wrap{background:var(--green-xlight);border-radius:24px;display:flex;align-items:center;justify-content:center;padding:40px;min-height:220px}
+    .servico-content h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-dark);margin-bottom:14px}
+    .servico-content p{font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:16px}
+    .beneficios{list-style:none;margin-bottom:20px}
+    .beneficios li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-mid);margin-bottom:8px}
+    .badge-garantia{display:inline-flex;align-items:center;gap:6px;background:var(--green-xlight);color:var(--green-dark);font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px;margin-bottom:20px}
+    .btn-g{display:inline-block;background:var(--green);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;transition:background .25s,transform .25s}
+    .btn-g:hover{background:var(--green-dark);transform:translateY(-2px)}
+    .servico-img-wrap{position:relative;border-radius:20px;overflow:hidden;min-height:300px}
+    .servico-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;min-height:300px}
+    .servico-img-wrap .svc-icon{position:absolute;bottom:16px;left:16px;background:#fff;border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+
+    /* ATENDEMOS */
+    .atendemos-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+    .atende-item{text-align:center;padding:24px 12px}
+    .atende-item h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--text-dark);margin-top:12px}
+
+    /* DIFERENCIAIS */
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .dif-card{background:#fff;border-radius:16px;padding:28px 20px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+    .dif-card h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;color:var(--text-dark);margin:12px 0 8px}
+    .dif-card p{font-size:13px;color:var(--gray);line-height:1.6}
+
+    /* DEPOIMENTOS */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .depo-card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+    .stars{display:flex;gap:3px;margin-bottom:14px}
+    .depo-text{font-size:15px;color:var(--text-mid);font-style:italic;margin-bottom:20px;line-height:1.7}
+    .depo-author{display:flex;align-items:center;gap:12px}
+    .avatar{width:42px;height:42px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;flex-shrink:0}
+    .author-name{font-weight:600;font-size:14px;color:var(--text-dark)}
+    .author-place{font-size:13px;color:var(--gray)}
+
+    /* CTA FINAL */
+    .cta-final{background:var(--green-dark);padding:70px 5%;text-align:center}
+    .cta-final h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:12px}
+    .cta-phone{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2rem;color:#A5D6A7;margin-bottom:24px;display:block}
+    .btn-white{display:inline-block;background:#fff;color:var(--green-dark);padding:16px 36px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+
+    /* FOOTER */
+    footer{background:#111;padding:60px 5% 24px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:48px}
+    .f-logo-block{background:var(--green-dark);color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;padding:3px 8px;display:inline-block;margin-bottom:4px}
+    .f-logo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;display:block}
+    .f-logo-sub{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.45)}
+    .f-desc{margin-top:14px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.55)}
+    .f-social{display:flex;gap:10px;margin-top:18px}
+    .social-btn{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s;text-decoration:none}
+    .social-btn:hover{background:var(--green)}
+    .f-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+    .f-col ul{list-style:none}
+    .f-col ul li{margin-bottom:10px}
+    .f-col ul li a{color:rgba(255,255,255,.55);text-decoration:none;font-size:14px;transition:color .2s}
+    .f-col ul li a:hover{color:var(--green-light)}
+    .f-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:14px;color:rgba(255,255,255,.55)}
+    .footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:13px;color:rgba(255,255,255,.35)}
+
+    /* FLOATING WA */
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;flex-direction:column;align-items:flex-end}
+    .wa-float a{width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;transition:transform .2s}
+    .wa-float a:hover{transform:scale(1.05)}
+    .wa-float a::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid #25D366;animation:pulse 2s infinite}
+    @keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.4);opacity:0}}
+    .wa-tooltip{background:var(--green-dark);color:#fff;font-size:13px;font-weight:600;padding:7px 14px;border-radius:8px;margin-bottom:10px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity .25s,transform .25s;pointer-events:none}
+    .wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0)}
+
+    /* ANIMATIONS */
+    .fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 5%;box-shadow:0 8px 24px rgba(0,0,0,.1);gap:0;z-index:199}
+      .nav-links.open{display:flex}
+      .nav-links li{border-bottom:1px solid rgba(0,0,0,.06)}
+      .nav-links a{display:block;padding:14px 0}
+      .nav-links li:last-child{border-bottom:none}
+      .nav-cta{margin-top:8px;text-align:center;border-radius:8px;display:block}
+      .servico-bloco{grid-template-columns:1fr}
+      .servico-bloco.reverse{direction:ltr}
+      .atendemos-grid{grid-template-columns:repeat(3,1fr)}
+      .grid-4{grid-template-columns:repeat(2,1fr)}
+      .grid-3{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;gap:32px}
+      .sticky-bar{flex-direction:column;gap:8px;text-align:center}
+    }
+    @media(max-width:480px){
+      .atendemos-grid{grid-template-columns:repeat(2,1fr)}
+      .grid-4{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Logotipo M1 Service Dedetizadora" width="140" loading="eager">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegacao">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="serviços.html" class="active">Serviços</a></li>
+      <li><a href="pragas.html">Pragas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="nav-cta" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="sticky-bar">
+  <span class="sb-phone">(61) 9 9326-3868</span>
+  <div class="sb-right">
+    <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="sb-cta" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+    <button class="sb-close" id="sb-close" aria-label="Fechar barra">x</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path d="M14 6 L34 6 L32 26 Q30 32 24 32 Q18 32 16 26 Z" fill="rgba(255,255,255,0.8)"/><path d="M14 8 Q6 10 7 18 Q8 24 14 24" stroke="rgba(255,255,255,0.8)" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M34 8 Q42 10 41 18 Q40 24 34 24" stroke="rgba(255,255,255,0.8)" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+      10 Anos Atendendo o DF
+    </div>
+    <h1>Dedetizadora em Brasília, DF. Orçamento Grátis</h1>
+    <p class="hero-sub">Eliminamos baratas, ratos, cupins e mais. Residências, comércios e industrias em todo o Distrito Federal.</p>
+    <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-prim" target="_blank" rel="noopener noreferrer">Receber Orçamento Grátis Agora</a>
+    <div class="trust-bar">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,0.25)"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Mais de 1.000 clientes atendidos
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,0.25)"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Garantia de 30 dias
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,0.25)"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Todo o DF
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICOS DETALHADOS -->
+<section class="bg-white">
+  <div class="sec-inner">
+    <!-- DEDETIZACAO -->
+    <div class="servico-bloco fade-up">
+      <div class="servico-img-wrap">
+        <img src="assets/images/dedetização.png" alt="Dedetização profissional em Brasília, DF" loading="lazy">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="26" rx="9" ry="13" fill="#1B5E20"/><circle cx="24" cy="12" r="5" fill="#1B5E20"/><line x1="22" y1="8" x2="14" y2="2" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="26" y1="8" x2="34" y2="2" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="20" x2="6" y2="18" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="26" x2="5" y2="26" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="32" x2="6" y2="36" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="20" x2="42" y2="18" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="26" x2="43" y2="26" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="32" x2="42" y2="36" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+      <div class="servico-content">
+        <h2>Dedetização</h2>
+        <p>Combate especializado a baratas, aranhas e escorpioes em ambientes residênciais e comerciais. Aplicação de produtos com total segurança para moradores e animais de estimacao após o período de secagem e ventilação adequada.</p>
+        <p>Utilizamos equipamentos de qualidade e técnicas modernas que garantem eficiencia sem colocar sua família em risco.</p>
+        <ul class="beneficios">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Eliminação completa de baratas, aranhas e escorpioes</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Produtos seguros para pets e crianças após secagem</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Atende residências, apartamentos, comércios e industrias</li>
+        </ul>
+        <div class="badge-garantia"><svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path d="M24 4 L40 10 L40 24 Q40 36 24 44 Q8 36 8 24 L8 10 Z" fill="#2E7D32"/><path d="M16 24 L22 30 L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Garantia de 30 dias</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Orçamento para Dedetização</a>
+      </div>
+    </div>
+
+    <!-- DESRATIZACAO -->
+    <div class="servico-bloco reverse fade-up">
+      <div class="servico-img-wrap">
+        <img src="assets/images/desratização.png" alt="Desratização profissional em Brasília, DF" loading="lazy">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="26" cy="28" rx="13" ry="10" fill="#607D8B"/><circle cx="13" cy="24" r="7" fill="#607D8B"/><circle cx="9" cy="17" r="4" fill="#607D8B"/><circle cx="17" cy="16" r="3" fill="#607D8B"/><path d="M38 28 Q44 24 44 36" stroke="#607D8B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+      <div class="servico-content">
+        <h2>Desratização</h2>
+        <p>Eliminação e prevenção de roedores com instalação estrategica de iscos e barreiras fisicas. Evita a contaminação de alimentos, danos a fiacoes elétricas e riscos a saude causados por esses animais.</p>
+        <p>Diagnosticamos os pontos de entrada e circulacao dos ratos para uma solução definitiva e duradoura.</p>
+        <ul class="beneficios">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Iscos e armadilhas instalados estrategicamente</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Prevenção contra leptospirose e hantavirose</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Barreiras fisicas para prevenção de novas entradas</li>
+        </ul>
+        <div class="badge-garantia"><svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path d="M24 4 L40 10 L40 24 Q40 36 24 44 Q8 36 8 24 L8 10 Z" fill="#2E7D32"/><path d="M16 24 L22 30 L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Garantia de 30 dias</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20desratiza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Orçamento para Desratização</a>
+      </div>
+    </div>
+
+    <!-- DESCUPINIZACAO -->
+    <div class="servico-bloco fade-up">
+      <div class="servico-img-wrap">
+        <img src="assets/images/descupinização.png" alt="Descupinização profissional em Brasília, DF" loading="lazy">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="37" rx="9" ry="8" fill="#795548"/><ellipse cx="24" cy="24" rx="7" ry="6" fill="#795548"/><ellipse cx="24" cy="13" rx="5" ry="5" fill="#795548"/><polygon points="19,10 16,7 21,11" fill="#795548"/><polygon points="29,10 32,7 27,11" fill="#795548"/><line x1="22" y1="9" x2="18" y2="4" stroke="#795548" stroke-width="1.5" stroke-linecap="round"/><line x1="26" y1="9" x2="30" y2="4" stroke="#795548" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+      <div class="servico-content">
+        <h2>Descupinização</h2>
+        <p>Diagnóstico preciso do nivel de infestação de cupins de madeira e de solo, seguido de aplicação de produtos de barreira e acompanhamento pos-tratamento. Protegemos moveis, forros e a estrutura do seu imóvel.</p>
+        <p>Cupins causam danos silenciosos e custosos. Agir cedo evita prejuizos maiores na estrutura da construção.</p>
+        <ul class="beneficios">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Diagnóstico de cupins de madeira e de solo</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Produto de barreira de longa duracao</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Acompanhamento e orientação pos-tratamento</li>
+        </ul>
+        <div class="badge-garantia"><svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path d="M24 4 L40 10 L40 24 Q40 36 24 44 Q8 36 8 24 L8 10 Z" fill="#2E7D32"/><path d="M16 24 L22 30 L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Garantia de 30 dias</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20descupiniza%C3%A7%C3%A3o." class="btn-g" target="_blank" rel="noopener noreferrer">Orçamento para Descupinização</a>
+      </div>
+    </div>
+
+    <!-- POMBOS -->
+    <div class="servico-bloco reverse fade-up">
+      <div class="servico-img-wrap">
+        <img src="assets/images/controle-pombos.png" alt="Controle de pombos em Brasília, DF" loading="lazy">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><ellipse cx="24" cy="26" rx="13" ry="9" fill="#9E9E9E"/><circle cx="12" cy="20" r="7" fill="#9E9E9E"/><polygon points="6,21 2,22 6,23" fill="#795548"/><path d="M16 22 Q24 16 35 20" stroke="#757575" stroke-width="2" fill="none"/><polygon points="37,26 44,22 44,30" fill="#9E9E9E"/></svg>
+        </div>
+      </div>
+      <div class="servico-content">
+        <h2>Controle de Pombos</h2>
+        <p>Instalação de sistemas de afugentamento e repelencia para pombos. Solução humanizada que evita a presenca das aves sem causar danos. Indicado para edifícios, comércios e residências em Brasília e DF.</p>
+        <p>Pombos carregam fungos, parasitas e bactérias que representam risco sanitario e depreciam os imóveis.</p>
+        <ul class="beneficios">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Metodo humanizado, sem causar dano as aves</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Instalação de telas, pinos e sistemas repelentes</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Solução para edifícios, comércios e residências</li>
+        </ul>
+        <div class="badge-garantia"><svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path d="M24 4 L40 10 L40 24 Q40 36 24 44 Q8 36 8 24 L8 10 Z" fill="#2E7D32"/><path d="M16 24 L22 30 L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Garantia de 30 dias</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20controle%20de%20pombos." class="btn-g" target="_blank" rel="noopener noreferrer">Orçamento para Controle de Pombos</a>
+      </div>
+    </div>
+
+    <!-- CAIXA DE AGUA -->
+    <div class="servico-bloco fade-up">
+      <div class="servico-img-wrap">
+        <img src="assets/images/limpeza-caixa-agua.png" alt="Limpeza de caixa de água em Brasília, DF" loading="lazy">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="8" y="8" width="32" height="24" rx="4" fill="#1565C0"/><ellipse cx="24" cy="8" rx="16" ry="4" fill="#0D47A1"/><path d="M15 38 Q15 44 19 44 Q23 44 23 38 Q21 34 19 32 Q17 34 15 38Z" fill="#1565C0"/><path d="M22 40 Q22 46 26 46 Q30 46 30 40 Q28 36 26 34 Q24 36 22 40Z" fill="#1565C0"/><path d="M29 38 Q29 44 33 44 Q37 44 37 38 Q35 34 33 32 Q31 34 29 38Z" fill="#1565C0"/></svg>
+        </div>
+      </div>
+      <div class="servico-content">
+        <h2>Limpeza de Caixa de Água</h2>
+        <p>Limpeza completa, higienização e desinfecção do reservatório de água. Recomendado a cada 6 meses conforme normas da ABNT. Garante água segura e livre de contaminantes para toda a família.</p>
+        <p>Caixas não higienizadas acumulam sedimentos, algas e micro-organismos que afetam a qualidade da água que você bebe.</p>
+        <ul class="beneficios">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Limpeza, higienização e desinfecção completa</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Recomendado a cada 6 meses</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Emissao de laudo após serviço</li>
+        </ul>
+        <div class="badge-garantia"><svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path d="M24 4 L40 10 L40 24 Q40 36 24 44 Q8 36 8 24 L8 10 Z" fill="#2E7D32"/><path d="M16 24 L22 30 L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Garantia de 30 dias</div>
+        <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20limpeza%20de%20caixa%20de%20%C3%A1gua." class="btn-g" target="_blank" rel="noopener noreferrer">Orçamento para Limpeza de Caixa de Água</a>
+      </div>
+    </div>
+
+    <!-- EMERGENCIAL -->
+    <div class="servico-bloco reverse fade-up">
+      <div class="servico-img-wrap">
+        <img src="assets/images/atendimento-emergencial.png" alt="Atendimento emergencial em Brasília, DF" loading="lazy">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B5E20"/><polygon points="28,8 18,26 24,26 20,40 30,22 24,22" fill="#F57F17"/></svg>
+        </div>
+      </div>
+      <div class="servico-content">
+        <h2>Atendimento Emergencial</h2>
+        <p>Disponivel aos domingos e fora do horario comercial para situacoes urgentes como infestações graves de escorpioes, surtos de roedores ou outros casos que exigem acao imediata.</p>
+        <p>Não espere até segunda-feira quando sua segurança esta em risco. Nossa equipe esta disponivel para você.</p>
+        <ul class="beneficios">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Disponivel aos domingos para emergencias</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Atendimento rápido para escorpioes e roedores</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E7D32"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Contato via WhatsApp a qualquer hora</li>
+        </ul>
+        <a href="https://wa.me/5561993263868?text=Preciso%20de%20atendimento%20emergencial!%20Pode%20me%20ajudar%3F" class="btn-g" target="_blank" rel="noopener noreferrer">Orçamento para Emergencia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATENDEMOS -->
+<section class="bg-gray">
+  <div class="sec-inner">
+    <h2 class="sec-title fade-up">Atendemos todos os tipos de <span>imóveis</span></h2>
+    <div class="atendemos-grid">
+      <div class="atende-item fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><polygon points="24,4 44,22 4,22" fill="#1B5E20"/><rect x="8" y="22" width="32" height="22" fill="#2E7D32"/><rect x="20" y="30" width="8" height="14" rx="1" fill="#1B5E20"/><rect x="10" y="26" width="7" height="7" rx="1" fill="#A5D6A7"/><rect x="31" y="26" width="7" height="7" rx="1" fill="#A5D6A7"/></svg>
+        <h3>Casa</h3>
+      </div>
+      <div class="atende-item fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="10" y="4" width="28" height="40" fill="#37474F"/><rect x="14" y="8" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="21" y="8" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="28" y="8" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="14" y="16" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="21" y="16" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="28" y="16" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="14" y="24" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="21" y="24" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="28" y="24" width="5" height="5" rx="1" fill="#B0BEC5"/><rect x="19" y="38" width="10" height="6" rx="1" fill="#455A64"/></svg>
+        <h3>Apartamento</h3>
+      </div>
+      <div class="atende-item fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="6" y="12" width="36" height="32" fill="#37474F"/><rect x="12" y="18" width="7" height="7" rx="1" fill="#B0BEC5"/><rect x="22" y="18" width="7" height="7" rx="1" fill="#B0BEC5"/><rect x="32" y="18" width="7" height="7" rx="1" fill="#B0BEC5"/><rect x="18" y="36" width="12" height="8" rx="1" fill="#455A64"/><rect x="2" y="8" width="44" height="6" rx="2" fill="#546E7A"/></svg>
+        <h3>Comércio</h3>
+      </div>
+      <div class="atende-item fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="4" y="14" width="40" height="30" rx="2" fill="#37474F"/><rect x="10" y="20" width="8" height="10" rx="1" fill="#B0BEC5"/><rect x="22" y="20" width="8" height="10" rx="1" fill="#B0BEC5"/><rect x="34" y="20" width="8" height="10" rx="1" fill="#B0BEC5"/><rect x="18" y="36" width="12" height="8" rx="1" fill="#455A64"/><path d="M4 14 Q24 4 44 14" fill="#546E7A"/></svg>
+        <h3>Academia</h3>
+      </div>
+      <div class="atende-item fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><rect x="4" y="22" width="40" height="22" fill="#546E7A"/><rect x="10" y="8" width="8" height="14" fill="#546E7A"/><rect x="24" y="12" width="6" height="10" fill="#546E7A"/><path d="M13 8 Q11 5 13 3" stroke="#90A4AE" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M16 8 Q18 5 16 3" stroke="#90A4AE" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M26 12 Q24 9 26 7" stroke="#90A4AE" stroke-width="1.5" fill="none" stroke-linecap="round"/><rect x="19" y="36" width="10" height="8" rx="1" fill="#455A64"/></svg>
+        <h3>Industria</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="bg-white">
+  <div class="sec-inner">
+    <h2 class="sec-title fade-up">Nossos <span>diferenciais</span></h2>
+    <div class="grid-4">
+      <div class="dif-card fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M14 6 L34 6 L32 26 Q30 32 24 32 Q18 32 16 26 Z" fill="#F9A825"/><path d="M14 8 Q6 10 7 18 Q8 24 14 24" stroke="#F9A825" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M34 8 Q42 10 41 18 Q40 24 34 24" stroke="#F9A825" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="21" y="32" width="6" height="6" fill="#F9A825"/><rect x="14" y="38" width="20" height="4" rx="2" fill="#F9A825"/></svg>
+        <h3>10 Anos de Experiencia</h3>
+        <p>Decada de atuação no DF com mais de 1.000 clientes satisfeitos.</p>
+      </div>
+      <div class="dif-card fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M24 4 L40 10 L40 24 Q40 36 24 44 Q8 36 8 24 L8 10 Z" fill="#2E7D32"/><path d="M16 24 L22 30 L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <h3>Produtos de Qualidade</h3>
+        <p>Produtos eficientes e seguros para a família após correto uso.</p>
+      </div>
+      <div class="dif-card fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B5E20"/><polygon points="28,8 18,26 24,26 20,40 30,22 24,22" fill="#F57F17"/></svg>
+        <h3>Atendimento Emergencial</h3>
+        <p>Domingos e feriados para casos urgentes. Sem custo de espera.</p>
+      </div>
+      <div class="dif-card fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="20" stroke="#2E7D32" stroke-width="3" fill="none"/><line x1="24" y1="24" x2="14" y2="14" stroke="#2E7D32" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="24" x2="24" y2="8" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="2" fill="#2E7D32"/></svg>
+        <h3>Horario Flexivel</h3>
+        <p>Segunda a sabado, 8h as 18h. Agendamos no horario que funciona para você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="bg-gray">
+  <div class="sec-inner">
+    <h2 class="sec-title fade-up">O que <span>clientes dizem</span></h2>
+    <div class="grid-3">
+      <div class="depo-card fade-up">
+        <div class="stars">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+        </div>
+        <p class="depo-text">"Contratei a dedetização para meu restaurante. Serviço rápido, discreto e eficiente. Os clientes nem perceberam. Volto a contratar com certeza."</p>
+        <div class="depo-author"><div class="avatar">R</div><div><div class="author-name">Roberto Alves</div><div class="author-place">Asa Norte, DF</div></div></div>
+      </div>
+      <div class="depo-card fade-up">
+        <div class="stars">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+        </div>
+        <p class="depo-text">"Descupinização feita com muito cuidado. Explicaram todo o processo, usaram produtos que não afetaram meus gatos. Recomendo para qualquer um no DF."</p>
+        <div class="depo-author"><div class="avatar">F</div><div><div class="author-name">Fernanda Lima</div><div class="author-place">Guara, DF</div></div></div>
+      </div>
+      <div class="depo-card fade-up">
+        <div class="stars">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,12 3.5,15 5,9.5 1,6 6,6" fill="#F9A825"/></svg>
+        </div>
+        <p class="depo-text">"Tivemos infestação de ratos no deposito. A M1 Service resolveu em dois atendimentos. Profissionais serios e pontuais. Atendimento excelente no DF."</p>
+        <div class="depo-author"><div class="avatar">J</div><div><div class="author-name">Jose Carlos M.</div><div class="author-place">Samambaia, DF</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="sec-inner">
+    <h2>Solicite seu orçamento gratuito agora</h2>
+    <span class="cta-phone">(61) 9 9326-3868</span>
+    <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-white" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="assets/images/logo.png" alt="Logotipo M1 Service Dedetizadora" width="140" loading="lazy" style="margin-bottom:14px;display:block">
+      <p class="f-desc">Empresa especializada em controle de pragas urbanas em Brasília e em todo o Distrito Federal. Há 10 anos protegendo famílias e negocios.</p>
+      <div class="f-social">
+        <a href="https://wa.me/5561993263868" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp M1 Service">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
+        </a>
+        <a href="https://instagram.com/M1_service_Dedetização" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram M1 Service">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="none" stroke="white" stroke-width="2"/><circle cx="16" cy="16" r="7" fill="none" stroke="white" stroke-width="2"/><circle cx="23" cy="9" r="1.5" fill="white"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navegacao</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="pragas.html">Pragas</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="serviços.html">Dedetização</a></li>
+        <li><a href="serviços.html">Desratização</a></li>
+        <li><a href="serviços.html">Descupinização</a></li>
+        <li><a href="serviços.html">Controle de Pombos</a></li>
+        <li><a href="serviços.html">Limpeza de Caixa de Água</a></li>
+        <li><a href="serviços.html">Atendimento Emergencial</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contato</h4>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M12 2C7 2 3.5 6 3.5 11c0 6.5 8.5 12 8.5 12s8.5-5.5 8.5-12C20.5 6 17 2 12 2z" fill="#4CAF50"/><circle cx="12" cy="11" r="3" fill="white"/></svg>Quadra C12, Edifício São Paulo, Taguatinga, DF</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#4CAF50"/></svg>(61) 9 9326-3868</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#4CAF50"/></svg>M1serviceDedetizadora@gmail.com</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" fill="none"/><line x1="12" y1="12" x2="8" y2="8" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="12" x2="12" y2="7" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/></svg>Segunda a Sabado, 8h as 18h</div>
+    </div>
+  </div>
+  <div class="footer-bottom">2025 M1 Service Dedetizadora. Todos os direitos reservados.</div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<div class="wa-float">
+  <div class="wa-tooltip">Solicitar orçamento grátis</div>
+  <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
+    <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
+  </a>
+</div>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  const stickyBar = document.getElementById('sticky-bar');
+  let stickyDismissed = false;
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+    if (!stickyDismissed) stickyBar.classList.toggle('show', window.scrollY > 200);
+  });
+  document.getElementById('sb-close').addEventListener('click', () => {
+    stickyDismissed = true;
+    stickyBar.classList.remove('show');
+  });
+  const hbg = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hbg.addEventListener('click', () => {
+    hbg.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

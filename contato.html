@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — M1 Service Dedetizadora Brasília, DF</title>
+  <meta name="description" content="Entre em contato com a M1 Service Dedetizadora. WhatsApp, e-mail ou formulario. Atendemos Brasília e todo o Distrito Federal. Orçamento gratuito.">
+  <meta name="keywords" content="contato dedetizadora brasilia, telefone m1 service, orçamento dedetização df, whatsapp dedetizadora taguatinga">
+  <meta property="og:title" content="Contato — M1 Service Dedetizadora Brasília, DF">
+  <meta property="og:description" content="Fale com a M1 Service pelo WhatsApp, e-mail ou formulario. Orçamento gratuito em todo o DF.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#2E7D32;--green-dark:#1B5E20;--green-light:#4CAF50;--green-xlight:#E8F5E9;--white:#FFFFFF;--gray:#555555;--gray-light:#F5F5F5;--text-dark:#1A1A1A;--text-mid:#444444}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6}
+    a{color:inherit}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
+    nav.scrolled{box-shadow:0 2px 16px rgba(0,0,0,.12)}
+    .nav-inner{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo{text-decoration:none;display:flex;align-items:center}
+    .logo img{height:48px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--text-mid);transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--green)}
+    .nav-cta{background:var(--green)!important;color:#fff!important;padding:10px 20px;border-radius:8px;font-weight:600!important;transition:background .25s,transform .25s!important}
+    .nav-cta:hover{background:var(--green-dark)!important;transform:translateY(-2px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:transform .3s,opacity .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+    /* HERO */
+    .hero-int{padding:110px 5% 60px;background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('assets/images/hero-contato.png') center/cover no-repeat;position:relative;overflow:hidden}
+    .hero-int::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,#fff,#fff 1px,transparent 0,transparent 50%);background-size:30px 30px;opacity:.04;pointer-events:none}
+    .hero-int-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+    .breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:13px;margin-bottom:16px}
+    .breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none}
+    .breadcrumb span{color:rgba(255,255,255,.4)}
+    .hero-int h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,3rem);color:#fff;margin-bottom:12px}
+    .hero-int p{font-size:clamp(.95rem,2vw,1.1rem);color:rgba(255,255,255,.85);max-width:600px}
+
+    /* SECTIONS */
+    section{padding:80px 5%}
+    .sec-inner{max-width:1200px;margin:0 auto}
+    .sec-title{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--text-dark);text-align:center;margin-bottom:48px}
+    .sec-title span{color:var(--green)}
+    .bg-gray{background:var(--gray-light)}
+    .bg-white{background:#fff}
+
+    /* CONTATO PRINCIPAL */
+    .contato-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
+    /* FORMULARIO */
+    .form-card{background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 24px rgba(0,0,0,.09)}
+    .form-card h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.5rem;color:var(--text-dark);margin-bottom:8px}
+    .form-card .form-sub{font-size:14px;color:var(--gray);margin-bottom:28px;line-height:1.6}
+    .form-group{margin-bottom:18px}
+    .form-group label{display:block;font-weight:600;font-size:14px;color:var(--text-dark);margin-bottom:6px}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid rgba(0,0,0,.15);border-radius:8px;font-family:'Open Sans',sans-serif;font-size:15px;color:var(--text-dark);transition:border-color .2s;background:#fff}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--green)}
+    .form-group textarea{resize:vertical;min-height:120px}
+    .btn-submit{width:100%;background:var(--green);color:#fff;border:none;padding:15px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;cursor:pointer;transition:background .25s,transform .25s;display:flex;align-items:center;justify-content:center;gap:10px}
+    .btn-submit:hover{background:var(--green-dark);transform:translateY(-2px)}
+    .form-note{font-size:12px;color:var(--gray);text-align:center;margin-top:12px}
+
+    /* CANAIS */
+    .canais{display:flex;flex-direction:column;gap:16px}
+    .canal-card{background:#fff;border-radius:16px;padding:24px;display:flex;align-items:center;gap:16px;box-shadow:0 4px 24px rgba(0,0,0,.07);text-decoration:none;transition:transform .25s,box-shadow .25s}
+    .canal-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.12)}
+    .canal-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .canal-icon.wa{background:#25D366}
+    .canal-icon.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+    .canal-icon.em{background:#1565C0}
+    .canal-body h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;color:var(--text-dark);margin-bottom:3px}
+    .canal-body p{font-size:13px;color:var(--gray)}
+
+    /* HORARIOS */
+    .horario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .horario-card{background:#fff;border-radius:14px;padding:24px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.07)}
+    .horario-icon{display:flex;justify-content:center;margin-bottom:14px}
+    .horario-card h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;color:var(--text-dark);margin-bottom:6px}
+    .horario-card p{font-size:14px;color:var(--gray)}
+    .horario-badge{display:inline-block;padding:4px 12px;border-radius:100px;font-size:12px;font-weight:700;margin-top:8px}
+    .badge-ativo{background:var(--green-xlight);color:var(--green-dark)}
+    .badge-emergencia{background:#FFF3E0;color:#E65100}
+
+    /* MAPA */
+    .mapa-section{background:var(--gray-light);padding:0}
+    .mapa-header{padding:60px 5% 32px;text-align:center}
+    .mapa-header h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-dark);margin-bottom:8px}
+    .mapa-header p{font-size:15px;color:var(--gray)}
+    .mapa-wrap{position:relative;width:100%;height:400px;overflow:hidden}
+    .mapa-wrap iframe{width:100%;height:100%;border:none;display:block}
+
+    /* CTA FINAL */
+    .cta-final{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 100%);padding:80px 5%;text-align:center}
+    .cta-final h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:28px}
+    .btn-white{display:inline-block;background:#fff;color:var(--green-dark);padding:16px 36px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+
+    /* FOOTER */
+    footer{background:#111;padding:60px 5% 24px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:48px}
+    .f-logo-block{background:var(--green-dark);color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;padding:3px 8px;display:inline-block;margin-bottom:4px}
+    .f-logo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;display:block}
+    .f-logo-sub{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.45)}
+    .f-desc{margin-top:14px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.55)}
+    .f-social{display:flex;gap:10px;margin-top:18px}
+    .social-btn{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s;text-decoration:none}
+    .social-btn:hover{background:var(--green)}
+    .f-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+    .f-col ul{list-style:none}
+    .f-col ul li{margin-bottom:10px}
+    .f-col ul li a{color:rgba(255,255,255,.55);text-decoration:none;font-size:14px;transition:color .2s}
+    .f-col ul li a:hover{color:var(--green-light)}
+    .f-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:14px;color:rgba(255,255,255,.55)}
+    .footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:13px;color:rgba(255,255,255,.35)}
+
+    /* WA FLOAT */
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;flex-direction:column;align-items:flex-end}
+    .wa-float a{width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;transition:transform .2s}
+    .wa-float a:hover{transform:scale(1.05)}
+    .wa-float a::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid #25D366;animation:pulse 2s infinite}
+    @keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.4);opacity:0}}
+    .wa-tooltip{background:var(--green-dark);color:#fff;font-size:13px;font-weight:600;padding:7px 14px;border-radius:8px;margin-bottom:10px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity .25s,transform .25s;pointer-events:none}
+    .wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0)}
+
+    .fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 5%;box-shadow:0 8px 24px rgba(0,0,0,.1);gap:0;z-index:199}
+      .nav-links.open{display:flex}
+      .nav-links li{border-bottom:1px solid rgba(0,0,0,.06)}
+      .nav-links a{display:block;padding:14px 0}
+      .nav-links li:last-child{border-bottom:none}
+      .nav-cta{margin-top:8px;text-align:center;border-radius:8px;display:block}
+      .contato-layout{grid-template-columns:1fr}
+      .horario-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;gap:32px}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Logotipo M1 Service Dedetizadora" width="140" loading="eager">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegacao"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="serviços.html">Serviços</a></li>
+      <li><a href="pragas.html">Pragas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contato.html" class="active">Contato</a></li>
+      <li><a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="nav-cta" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero-int">
+  <div class="hero-int-inner">
+    <nav class="breadcrumb" aria-label="Caminho de navegacao">
+      <a href="index.html">Inicio</a><span>/</span><span>Contato</span>
+    </nav>
+    <h1>Fale com a M1 Service</h1>
+    <p>Orçamento gratuito pelo WhatsApp, e-mail ou formulario. Atendemos todo o Distrito Federal.</p>
+  </div>
+</div>
+
+<!-- CONTATO PRINCIPAL -->
+<section class="bg-white">
+  <div class="sec-inner">
+    <div class="contato-layout">
+
+      <!-- FORMULARIO -->
+      <div class="form-card fade-up">
+        <h2>Solicitar Orçamento</h2>
+        <p class="form-sub">Preencha o formulario e entraremos em contato pelo WhatsApp com o orçamento gratuito.</p>
+        <form id="form-contato" novalidate>
+          <div class="form-group">
+            <label for="f-nome">Seu nome</label>
+            <input type="text" id="f-nome" name="nome" placeholder="Como posso te chamar?" required>
+          </div>
+          <div class="form-group">
+            <label for="f-tel">Telefone ou WhatsApp</label>
+            <input type="tel" id="f-tel" name="telefone" placeholder="(61) 9 0000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="f-serviço">Serviço de interesse</label>
+            <select id="f-serviço" name="serviço" required>
+              <option value="">Selecione um serviço</option>
+              <option value="dedetização">Dedetização</option>
+              <option value="desratização">Desratização</option>
+              <option value="descupinização">Descupinização</option>
+              <option value="pombos">Controle de Pombos</option>
+              <option value="caixa">Limpeza de Caixa de Água</option>
+              <option value="emergencia">Atendimento Emergencial</option>
+              <option value="outro">Outro / Não sei</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-msg">Descricao do problema</label>
+            <textarea id="f-msg" name="mensagem" placeholder="Descreva brevemente o que esta acontecendo e o tipo de imóvel (casa, apartamento, comércio...)"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
+            Enviar pelo WhatsApp
+          </button>
+          <p class="form-note">Suas informacoes serao enviadas diretamente ao WhatsApp da M1 Service. Não armazenamos dados.</p>
+        </form>
+      </div>
+
+      <!-- CANAIS -->
+      <div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.5rem;color:var(--text-dark);margin-bottom:24px" class="fade-up">Canais de atendimento</h2>
+        <div class="canais">
+          <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="canal-card fade-up" target="_blank" rel="noopener noreferrer">
+            <div class="canal-icon wa">
+              <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
+            </div>
+            <div class="canal-body">
+              <h3>WhatsApp</h3>
+              <p>(61) 9 9326-3868 — Resposta rápida</p>
+            </div>
+          </a>
+          <a href="mailto:M1serviceDedetizadora@gmail.com" class="canal-card fade-up">
+            <div class="canal-icon em">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="white"/></svg>
+            </div>
+            <div class="canal-body">
+              <h3>E-mail</h3>
+              <p>M1serviceDedetizadora@gmail.com</p>
+            </div>
+          </a>
+          <a href="https://instagram.com/M1_service_Dedetização" class="canal-card fade-up" target="_blank" rel="noopener noreferrer">
+            <div class="canal-icon ig">
+              <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="none" stroke="white" stroke-width="2"/><circle cx="16" cy="16" r="7" fill="none" stroke="white" stroke-width="2"/><circle cx="23" cy="9" r="1.5" fill="white"/></svg>
+            </div>
+            <div class="canal-body">
+              <h3>Instagram</h3>
+              <p>@M1_service_Dedetização</p>
+            </div>
+          </a>
+
+          <!-- ENDERECO -->
+          <div class="canal-card fade-up" style="cursor:default">
+            <div class="canal-icon" style="background:var(--green-xlight)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="28" height="28" aria-hidden="true"><path d="M24 4 C14 4 7 12 7 22 C7 34 24 46 24 46 C24 46 41 34 41 22 C41 12 34 4 24 4Z" fill="#2E7D32"/><circle cx="24" cy="22" r="6" fill="white"/></svg>
+            </div>
+            <div class="canal-body">
+              <h3>Endereco</h3>
+              <p>Quadra C12, Edifício São Paulo, Taguatinga Centro, DF</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORARIOS -->
+<section class="bg-gray">
+  <div class="sec-inner">
+    <h2 class="sec-title fade-up">Horario de <span>atendimento</span></h2>
+    <div class="horario-grid">
+      <div class="horario-card fade-up">
+        <div class="horario-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="20" stroke="#2E7D32" stroke-width="3" fill="none"/><line x1="24" y1="24" x2="14" y2="14" stroke="#2E7D32" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="24" x2="24" y2="8" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="2" fill="#2E7D32"/></svg>
+        </div>
+        <h3>Segunda a Sexta</h3>
+        <p>8h as 18h</p>
+        <span class="horario-badge badge-ativo">Atendimento normal</span>
+      </div>
+      <div class="horario-card fade-up">
+        <div class="horario-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="20" stroke="#2E7D32" stroke-width="3" fill="none"/><line x1="24" y1="24" x2="14" y2="14" stroke="#2E7D32" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="24" x2="24" y2="8" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="2" fill="#2E7D32"/></svg>
+        </div>
+        <h3>Sabado</h3>
+        <p>8h as 18h</p>
+        <span class="horario-badge badge-ativo">Atendimento normal</span>
+      </div>
+      <div class="horario-card fade-up">
+        <div class="horario-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B5E20"/><polygon points="28,8 18,26 24,26 20,40 30,22 24,22" fill="#F57F17"/></svg>
+        </div>
+        <h3>Domingo</h3>
+        <p>Somente emergencias</p>
+        <span class="horario-badge badge-emergencia">Via WhatsApp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<div class="mapa-section">
+  <div class="mapa-header">
+    <h2>Nossa localizacao</h2>
+    <p>Quadra C12, Edifício São Paulo, Taguatinga Centro, Brasília, DF</p>
+  </div>
+  <div class="mapa-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.4765!2d-48.0600!3d-15.8350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bcf9b0!2sTaguatinga%20Centro%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Localizacao M1 Service Dedetizadora, Taguatinga Centro, DF"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- CANAIS RAPIDOS -->
+<section class="bg-white">
+  <div class="sec-inner" style="text-align:center">
+    <h2 class="sec-title fade-up">Prefere falar <span>diretamente?</span></h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-wa fade-up" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:14px 28px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 16px rgba(37,211,102,.3)">
+        <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:M1serviceDedetizadora@gmail.com" class="fade-up" style="display:inline-flex;align-items:center;gap:10px;background:#1565C0;color:#fff;padding:14px 28px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;text-decoration:none;transition:transform .25s;box-shadow:0 4px 16px rgba(21,101,192,.25)">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="white"/></svg>
+        E-mail
+      </a>
+      <a href="https://instagram.com/M1_service_Dedetização" class="fade-up" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743);color:#fff;padding:14px 28px;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;text-decoration:none;transition:transform .25s;box-shadow:0 4px 16px rgba(220,39,67,.25)">
+        <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="none" stroke="white" stroke-width="2"/><circle cx="16" cy="16" r="7" fill="none" stroke="white" stroke-width="2"/><circle cx="23" cy="9" r="1.5" fill="white"/></svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="sec-inner">
+    <h2>Pronto para acabar com as pragas de vez?</h2>
+    <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." class="btn-white" target="_blank" rel="noopener noreferrer">Solicitar Orçamento Gratuito</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="assets/images/logo.png" alt="Logotipo M1 Service Dedetizadora" width="140" loading="lazy" style="margin-bottom:14px;display:block">
+      <p class="f-desc">Empresa especializada em controle de pragas urbanas em Brasília e em todo o Distrito Federal. Há 10 anos protegendo famílias e negocios.</p>
+      <div class="f-social">
+        <a href="https://wa.me/5561993263868" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg></a>
+        <a href="https://instagram.com/M1_service_Dedetização" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="none" stroke="white" stroke-width="2"/><circle cx="16" cy="16" r="7" fill="none" stroke="white" stroke-width="2"/><circle cx="23" cy="9" r="1.5" fill="white"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navegacao</h4>
+      <ul><li><a href="index.html">Inicio</a></li><li><a href="serviços.html">Serviços</a></li><li><a href="pragas.html">Pragas</a></li><li><a href="blog.html">Blog</a></li><li><a href="contato.html">Contato</a></li></ul>
+    </div>
+    <div class="f-col">
+      <h4>Serviços</h4>
+      <ul><li><a href="serviços.html">Dedetização</a></li><li><a href="serviços.html">Desratização</a></li><li><a href="serviços.html">Descupinização</a></li><li><a href="serviços.html">Controle de Pombos</a></li><li><a href="serviços.html">Limpeza de Caixa de Água</a></li></ul>
+    </div>
+    <div class="f-col">
+      <h4>Contato</h4>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M12 2C7 2 3.5 6 3.5 11c0 6.5 8.5 12 8.5 12s8.5-5.5 8.5-12C20.5 6 17 2 12 2z" fill="#4CAF50"/><circle cx="12" cy="11" r="3" fill="white"/></svg>Quadra C12, Edifício São Paulo, Taguatinga, DF</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#4CAF50"/></svg>(61) 9 9326-3868</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#4CAF50"/></svg>M1serviceDedetizadora@gmail.com</div>
+      <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" fill="none"/><line x1="12" y1="12" x2="8" y2="8" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="12" x2="12" y2="7" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/></svg>Segunda a Sabado, 8h as 18h</div>
+    </div>
+  </div>
+  <div class="footer-bottom">2025 M1 Service Dedetizadora. Todos os direitos reservados.</div>
+</footer>
+
+<div class="wa-float">
+  <div class="wa-tooltip">Solicitar orçamento grátis</div>
+  <a href="https://wa.me/5561993263868?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20dedetiza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
+    <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.687 5.101 1.885 7.241L1 31l8.008-1.847A14.94 14.94 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1zm0 27.333a12.274 12.274 0 01-6.26-1.712l-.449-.267-4.754 1.096 1.118-4.633-.292-.475A12.286 12.286 0 013.667 16C3.667 9.189 9.189 3.667 16 3.667S28.333 9.189 28.333 16 22.811 28.333 16 28.333zm6.733-9.203c-.369-.185-2.184-1.078-2.523-1.201-.339-.123-.585-.185-.832.185-.246.369-.954 1.201-1.17 1.447-.215.246-.431.277-.8.092-.369-.185-1.558-.574-2.967-1.83-1.096-.978-1.836-2.186-2.051-2.555-.215-.369-.023-.568.162-.752.166-.165.369-.431.554-.646.185-.215.246-.369.369-.615.123-.246.062-.461-.031-.646-.092-.185-.832-2.006-1.139-2.745-.3-.72-.604-.623-.832-.634l-.708-.012c-.246 0-.646.092-.985.461-.339.369-1.293 1.263-1.293 3.083s1.324 3.576 1.509 3.822c.185.246 2.607 3.98 6.317 5.582.882.381 1.571.608 2.108.779.885.281 1.691.242 2.328.147.71-.106 2.184-.893 2.492-1.756.308-.863.308-1.603.215-1.756-.092-.154-.339-.246-.708-.431z" fill="white"/></svg>
+  </a>
+</div>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const hbg = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hbg.addEventListener('click', () => { hbg.classList.toggle('open'); navLinks.classList.toggle('open'); });
+
+  // Formulario -> WhatsApp
+  document.getElementById('form-contato').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('f-nome').value.trim();
+    const tel = document.getElementById('f-tel').value.trim();
+    const serviço = document.getElementById('f-serviço').value;
+    const msg = document.getElementById('f-msg').value.trim();
+    const serviçoLabel = {
+      dedetização: 'Dedetização', desratização: 'Desratização', descupinização: 'Descupinização',
+      pombos: 'Controle de Pombos', caixa: 'Limpeza de Caixa de Água', emergencia: 'Atendimento Emergencial', outro: 'Outro'
+    };
+    let texto = 'Ola! Gostaria de solicitar um orçamento.\n';
+    if (nome) texto += 'Nome: ' + nome + '\n';
+    if (tel) texto += 'Telefone: ' + tel + '\n';
+    if (serviço) texto += 'Serviço: ' + (serviçoLabel[serviço] || serviço) + '\n';
+    if (msg) texto += 'Mensagem: ' + msg;
+    window.open('https://wa.me/5561993263868?text=' + encodeURIComponent(texto.trim()), '_blank', 'noopener,noreferrer');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
