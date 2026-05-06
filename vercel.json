@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/servicos.html", "destination": "/servicos/", "permanent": true },
+    { "source": "/pragas.html", "destination": "/pragas/", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog/", "permanent": true },
+    { "source": "/contato.html", "destination": "/contato/", "permanent": true }
+  ]
+}
