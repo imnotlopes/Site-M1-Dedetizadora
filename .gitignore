@@ -1,7 +1,10 @@
+# Arquivos temporarios do Word (criados ao abrir .docx)
+~$*
+
+# Documentos de referencia (mantidos localmente, fora do versionamento)
 /Passo 2.docx
-/PROMPT MASTER.docx
-/~$asso 2.docx
-/~$OMPT MASTER.docx
 /Passo 3.docx
-/~$asso 3.docx
+/PROMPT MASTER.docx
+
+# Dependencias
 /node_modules
