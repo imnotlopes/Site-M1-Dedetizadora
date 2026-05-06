@@ -11,12 +11,14 @@
   <meta property="og:description" content="Dicas de prevenção, informações sobre pragas e saúde em casa. Conteúdo especializado da M1 Service.">
   <meta property="og:url" content="https://www.m1dedetizadora.com.br/blog/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.m1dedetizadora.com.br/assets/images/hero-blog.png">
+  <meta property="og:image:alt" content="Blog da M1 Service — dicas de prevenção e controle de pragas">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/assets/site.webmanifest">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"M1 Service Dedetizadora","description":"Empresa de controle de pragas com 10 anos de experiência, atendendo todo o Distrito Federal.","telephone":"+55-61-99326-3868","email":"M1serviceDedetizadora@gmail.com","url":"https://www.m1dedetizadora.com.br","address":{"@type":"PostalAddress","streetAddress":"Quadra C12, Edifício São Paulo","addressLocality":"Taguatinga","addressRegion":"DF","postalCode":"72015-600","addressCountry":"BR"},"areaServed":["Taguatinga","Ceilândia","Samambaia","Águas Claras","Vicente Pires","Riacho Fundo","Brasília","Distrito Federal"],"openingHours":["Mo-Sa 08:00-18:00"],"priceRange":"$$","sameAs":["https://instagram.com/M1_service_Dedetização"]}
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"M1 Service Dedetizadora","description":"Empresa de controle de pragas com 10 anos de experiência, atendendo todo o Distrito Federal.","telephone":"+55-61-99326-3868","email":"M1serviceDedetizadora@gmail.com","url":"https://www.m1dedetizadora.com.br","address":{"@type":"PostalAddress","streetAddress":"Quadra C12, Edifício São Paulo","addressLocality":"Taguatinga","addressRegion":"DF","postalCode":"72015-600","addressCountry":"BR"},"areaServed":["Taguatinga","Ceilândia","Samambaia","Águas Claras","Vicente Pires","Riacho Fundo","Brasília","Distrito Federal"],"openingHours":["Mo-Sa 08:00-18:00"],"priceRange":"$$","sameAs":["https://instagram.com/M1_service_Dedetização","https://maps.app.goo.gl/NqzLFTEmuMpHVHU47"]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -193,7 +195,7 @@
           <span class="badge badge-prev">Prevenção</span>
           <h2>Como prevenir baratas na cozinha: 7 dicas práticas</h2>
           <p>A cozinha e o ambiente favorito das baratas. Com medidas simples de higiene e organizacao, e possivel afasta-las e evitar infestações.</p>
-          <a href="#art-baratas" class="link-art">Ler artigo completo</a>
+          <a href="/blog/como-prevenir-baratas/" class="link-art">Ler artigo completo</a>
         </div>
       </div>
       <div class="destaque-card fade-up">
@@ -202,7 +204,7 @@
           <span class="badge badge-pragas">Segurança</span>
           <h2>Escorpiao em casa: o que fazer e como se proteger no DF</h2>
           <p>O DF e uma das regiões com maior indice de acidentes com escorpioes no Brasil. Saiba como agir em caso de encontro e como prevenir.</p>
-          <a href="#art-escorpiao" class="link-art">Ler artigo completo</a>
+          <a href="/blog/escorpiao-em-casa-df/" class="link-art">Ler artigo completo</a>
         </div>
       </div>
       <div class="destaque-card fade-up">
@@ -211,7 +213,7 @@
           <span class="badge badge-pragas">Pragas</span>
           <h2>Cupim: como identificar e por que agir rápido</h2>
           <p>Cupins são discretos e destrutivos. Uma infestação pode comprometer moveis e estruturas inteiras antes que você perceba o problema.</p>
-          <a href="#art-cupim" class="link-art">Ler artigo completo</a>
+          <a href="/blog/cupim-como-identificar/" class="link-art">Ler artigo completo</a>
         </div>
       </div>
     </div>
@@ -386,7 +388,7 @@
       <div class="f-contact-item"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" fill="none"/><line x1="12" y1="12" x2="8" y2="8" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="12" x2="12" y2="7" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/></svg>Segunda a Sabado, 8h as 18h</div>
     </div>
   </div>
-  <div class="footer-bottom">2025 M1 Service Dedetizadora. Todos os direitos reservados.</div>
+  <div class="footer-bottom">© <span id="ano-copy">2026</span> M1 Service Dedetizadora. Todos os direitos reservados.</div>
 </footer>
 
 <div class="wa-float">
@@ -429,6 +431,7 @@
     entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); observer.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  var anoEl=document.getElementById('ano-copy');if(anoEl)anoEl.textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
