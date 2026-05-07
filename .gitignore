@@ -1,10 +1,11 @@
 # Arquivos temporarios do Word (criados ao abrir .docx)
 ~$*
 
-# Documentos de referencia (mantidos localmente, fora do versionamento)
-/Passo 2.docx
-/Passo 3.docx
-/PROMPT MASTER.docx
+# Documentos de referencia (qualquer .docx na raiz fica fora do versionamento)
+/*.docx
+
+# Configuracao local do Claude Code
+.claude/
 
 # Dependencias
 /node_modules
